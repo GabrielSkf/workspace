@@ -1,0 +1,53 @@
+# JOGO UNO feito em java
+
+
+# Cartas -> Classe
+- Naipes 
+	- espadas (♠), 
+	- paus (♣), 
+	- copas (♥) 
+	- ouros (♦)
+
+- Baralho
+(memoria para guardar quantas cartas restantes)
+
+Quantidade total de cartas: 150 cartas
+	- 9 Cartas para cada jogador
+(random) + sort + distribuir
+
+- embaralhar -> sort
+- distribuir -> pop da fila
+- cartas especiais
+	- inverte -> inverte o sentido do jogo (fila para armazenar o sentido / ordem)?
+	- +2 -> adiciona 2 as cartas ao proximo da fila
+	- +4 -> adiciona 4 as cartas ao proximo da fila
+	- Block -> bloqueia o proximo adversario da fila
+
+- mesmo naipe pode qualquer carta do naipe
+- mesmo numero pode qualquer numero ou carta do mesmo naipe
+
+
+# Regras de negocio
+- as cartas especiais podem ser estacadas entao, deve-se verificar se o usuario pode fazer isso
+
+- NAO PODE
+	-> block -> block
+	-> +2 do mesmo jogador
+	-> +4 do mesmo jogador
+	-> block -> inverte
+	-> block -> +2
+	-> block -> +4
+
+
+# Jogadores -> Classe
+- Inserir quantidade de jogadores -> usuario digita
+- Distribuir numeros conforme quantidade (J1, J2, J3, J4)
+- mostrar o deck de cartas para cada jogador conforme a vez
+- mostrar o atual e o deck de cartas
+
+
+# Jogo -> main.class
+- menu para inserir jogadores
+- menu para iniciar o jogo
+- menu para entender as regras
+
