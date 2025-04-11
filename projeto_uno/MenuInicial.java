@@ -11,7 +11,7 @@ public class MenuInicial {
         System.out.print("Selecione a opção desejada: ");
         switch (ler.nextInt()) {
             case 1 -> imprimeOpcaoJogadores();
-            case 2 -> imprimeOpcao2();
+            case 2 -> comecarJogo();
 
         }
     }
@@ -24,9 +24,10 @@ public class MenuInicial {
         return total_jogadores;
     }
 
-    public static void imprimeOpcao2() {
+    public static int comecarJogo() {
         System.out.println("++++ OPÇÃO 2 +++++");
-        System.out.printf("Digite a quantidade de sla: %s/n", ler.next());
+        System.out.print("Deseja iniciar o jogo? ");
+        return ler.nextInt();
     }
 
     }
