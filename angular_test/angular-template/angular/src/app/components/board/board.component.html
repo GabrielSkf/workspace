@@ -1,0 +1,38 @@
+<div class="board">
+  <div class="controls">
+    <div class="controls-input">
+        Scale
+            <div class="largura">
+                <label for="boardSizeX">X</label>
+                <input id="boardSizeX" type="number" [(ngModel)]="boardSizeX" name="sizeX">
+            </div>
+            <div class="altura">
+                <label for="boardSizeY">Y</label>
+                <input id="boardSizeY" type="number" [(ngModel)]="boardSizeY" name="sizeY">
+                <p>{{ row }}</p>
+        </div>
+    </div>
+    <div class="controls-btn">
+        <div class="confirm-btn">
+            <button class="btn-primary" (click)="submit()">Confirmar</button>
+        </div>
+    </div>
+    
+    
+  </div>
+
+  <div 
+  class="grid-container"
+  [style.gridTemplateColumns]="'repeat(' + boardSizeX + ', 72px)'"
+  [style.gridTemplateRows]="'repeat(' + boardSizeY + ', 72px)'"
+>
+  <div 
+    class="square"
+    
+    *ngFor="let i of squares"
+  >
+    <img [src]="getSquareImage(i)" alt="square" />
+  </div>
+</div>
+
+
