@@ -1,19 +1,40 @@
 .grid {
-    margin-top: 30px;
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    grid-template-columns: repeat(3, 72px);
-    border: 3px solid red;
-    min-height: 75vh;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.footer {
-    gap: 40px;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    // border: 1px solid green;
-    width: 100%;
+.row {
+  display: flex;
+}
+
+.cell {
+  width: 72px;
+  height: 72px;
+  background-size: cover;
+  position: relative;
+}
+
+.cell.white {
+  background-image: url("/tiles/white-tile.svg");
+  background-size: cover;
+}
+
+.cell.black {
+  background-image: url("/tiles/black-tile.svg");
+  background-size: cover;
+}
+
+.cell img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.cell.selected {
+  outline: 3px solid orange;
+  outline-offset: -3px; // faz com que a borda fique "dentro"
+  background-color: orange;
 }

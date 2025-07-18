@@ -1,14 +1,21 @@
 <main>
-    <div class="grid">
-        Grid
+  <div class="grid">
+  <div class="row" *ngFor="let row of board; let y = index">
+    <div class="cell" *ngFor="let cell of row; let x = index" [ngClass]="cell.color" [ngClass]="[cell.color, cell.selected ? 'selected' : '']"
+        (click)="selectCell(cell)">
+      <img *ngIf="cell.piece" [src]="'/pieces/' + cell.piece + '.svg'" alt="piece">
+      
     </div>
-    <div class="footer">
-        <div class="input-wrapper">
-            <input type="text">
-            <input type="text">
-        </div>
-        <div class="play-btn">
-            <button type="button">Play</button>
-        </div>
+  </div>
+</div>
+
+  <!-- <div class="footer">
+    <div class="input-wrapper">
+      <input type="number">
+      <input type="number">
     </div>
+    <div class="play-btn">
+      <button type="button">Play</button>
+    </div>
+  </div> -->
 </main>
