@@ -11,7 +11,7 @@ import java.util.Objects;
 
 import static io.vavr.API.*;
 
-public class DefaultCreateCategoryUseCase extends CreateCategoryUseCase{
+public class DefaultCreateCategoryUseCase extends CreateCategoryUseCase {
 
     private final CategoryGateway categoryGateway;
 
