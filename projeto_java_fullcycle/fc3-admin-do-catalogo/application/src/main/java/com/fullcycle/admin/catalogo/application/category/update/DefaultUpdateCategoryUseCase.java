@@ -38,7 +38,7 @@ public class DefaultUpdateCategoryUseCase extends UpdateCategoryUseCase {
 
         aCategory.update(aName, aDescription, isActive)
                 .validate(notification);
-        
+
         return notification.hasError() ? Left(notification) : update(aCategory);
     }
 
@@ -50,7 +50,7 @@ public class DefaultUpdateCategoryUseCase extends UpdateCategoryUseCase {
 
     private static Supplier<DomainException> notFound(CategoryID anId) {
         return () -> DomainException.with(
-                new Error("Category with ID %s was not found.".formatted(anId.getValue()))
+                new Error("Category with ID %s was not found".formatted(anId.getValue()))
         );
     }
 }
