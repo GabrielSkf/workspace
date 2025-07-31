@@ -49,6 +49,15 @@ public class Category extends AggregateRoot<CategoryID> implements Cloneable {
         );
     }
 
+    public static Category with(CategoryID id, 
+                                String name,
+                                String description,
+                                boolean active,
+                                Instant createdAt,
+                                Instant updatedAt,
+                                Instant deletedAt) {
+    }
+
     @Override
     public void validate(final ValidationHandler handler) {
         new CategoryValidator(this, handler).validate();
